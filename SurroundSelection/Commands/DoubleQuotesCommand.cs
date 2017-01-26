@@ -94,35 +94,18 @@ namespace SurroundSelection
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event args.</param>
         private void MenuItemCallback(object sender, EventArgs e)
-        {
-            string message = string.Format(CultureInfo.CurrentCulture, "Please select some text to toggle double quotes", this.GetType().FullName);
-
+        {           
             DTE2 dte = (DTE2)ServiceProvider.GetService(typeof(DTE));
             if (dte.ActiveDocument != null)
             {
                 var selection = (TextSelection)dte.ActiveDocument.Selection;
                 string text = selection.Text;
                 if (!string.IsNullOrEmpty(text))
-                {
-                    if (text.StartsWith("\"") && text.EndsWith("\""))
-                    {
-                        text = text.Substring(1, text.Length - 2);
-                    }
-                    else
-                    {
-                        text = $"\"{text}\"";
-                    }
-                    selection.Text = text;
-                }
+                    selection.Text = BaseFunctionality.ToggleDoubleQuotes(text);
                 else
                 {
-                    VsShellUtilities.ShowMessageBox(
-                        this.ServiceProvider,
-                        message,
-                        null,
-                        OLEMSGICON.OLEMSGICON_INFO,
-                        OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                        OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
+                    string message = string.Format(CultureInfo.CurrentCulture, "Please select some text to toggle double quotes", GetType().FullName);
+                    BaseFunctionality.ShowMessage(ServiceProvider, null, message);
                 }
             }
         }

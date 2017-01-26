@@ -69,6 +69,11 @@ namespace SurroundSelection
             DoubleQuotesCommand.Initialize(this);
             base.Initialize();
             SingleQuotesCommand.Initialize(this);
+            BracesCommand.Initialize(this);
+            ParenthesisCommand.Initialize(this);
+            AngularBracketsCommand.Initialize(this);
+            AsteriskCommand.Initialize(this);
+            SquareBracketsCommand.Initialize(this);
         }
 
         #endregion

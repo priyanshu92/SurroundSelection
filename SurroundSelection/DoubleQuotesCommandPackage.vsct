@@ -12,7 +12,7 @@
       </Group>
       <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenu" />
-      </Group>
+      </Group>      
     </Groups>
 
     <Menus>
@@ -32,17 +32,50 @@
           <ButtonText>Double Quotes</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" priority="0x0100" type="Button">
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" priority="0x0200" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
         <Strings>
           <ButtonText>Single Quotes</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidBracesCommand" priority="0x0300" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
+        <Strings>
+          <ButtonText>Braces</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesis" priority="0x0400" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
+        <Strings>
+          <ButtonText>Parentheses</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidSquareBracketsCommand" priority="0x0500" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
+        <Strings>
+          <ButtonText>Square Brackets</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBrackets" priority="0x0600" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
+        <Strings>
+          <ButtonText>Angular Brackets</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" priority="0x0700" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
+        <Icon guid="guidImages3" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Asterisk</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <Bitmaps>
-      <Bitmap guid="guidImages" href="Resources\DoubleQuotesCommand.png" usedList="bmpPic1" />
-      <!--<Bitmap guid="guidImages1" href="Resources\SingleQuotesCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />-->
+      <Bitmap guid="guidImages" href="Resources\DoubleQuotesCommand.png" usedList="bmpPic1" />     
+      <!--<Bitmap guid="guidImages1" href="Resources\SquareBracketsCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages2" href="Resources\AngularBrackets.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />-->
+      <Bitmap guid="guidImages3" href="Resources\AsteriskCommand.png" usedList="bmpPic1" />
     </Bitmaps>
   </Commands>
 
@@ -66,13 +99,17 @@
       <IDSymbol value="256" name="cmdidSingleQuotesCommand" />
     </GuidSymbol>
   
-    <!--<GuidSymbol value="{2a5f8a29-c38e-45e0-b430-02f5229f2b7e}" name="guidImages1">
+    <GuidSymbol value="{e0890da8-38a4-4db1-bbaa-93ba450cf9a9}" name="guidDoubleQuotesCommandPackageCmdSet2">
+      <IDSymbol value="4128" name="MyMenuGroup" />
+      <IDSymbol value="256" name="cmdidBracesCommand" />
+      <IDSymbol value="4129" name="cmdidParenthesis" />
+      <IDSymbol value="4130" name="cmdidSquareBracketsCommand" />
+      <IDSymbol value="4131" name="cmdidAngularBrackets" />
+      <IDSymbol value="4132" name="cmdidAsteriskCommand" />
+    </GuidSymbol>
+     
+    <GuidSymbol value="{53ffedf0-7706-4d32-9774-cce7be32f013}" name="guidImages3">
       <IDSymbol name="bmpPic1" value="1" />
-      <IDSymbol name="bmpPic2" value="2" />
-      <IDSymbol name="bmpPicSearch" value="3" />
-      <IDSymbol name="bmpPicX" value="4" />
-      <IDSymbol name="bmpPicArrows" value="5" />
-      <IDSymbol name="bmpPicStrikethrough" value="6" />
-    </GuidSymbol>-->
+    </GuidSymbol>
   </Symbols>
 </CommandTable>

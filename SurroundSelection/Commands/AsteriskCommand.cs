@@ -1,5 +1,5 @@
 ﻿//------------------------------------------------------------------------------
-// <copyright file="SingleQuotesCommand.cs" company="Company">
+// <copyright file="AsteriskCommand.cs" company="Company">
 //     Copyright (c) Company.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
@@ -9,25 +9,25 @@ using System.ComponentModel.Design;
 using System.Globalization;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using EnvDTE80;
 using EnvDTE;
+using EnvDTE80;
 
 namespace SurroundSelection
 {
     /// <summary>
     /// Command handler
     /// </summary>
-    internal sealed class SingleQuotesCommand
+    internal sealed class AsteriskCommand
     {
         /// <summary>
         /// Command ID.
         /// </summary>
-        public const int CommandId = 256;
+        public const int CommandId = 4132;
 
         /// <summary>
         /// Command menu group (command set GUID).
         /// </summary>
-        public static readonly Guid CommandSet = new Guid("1779ad3b-0e47-4e85-8c91-2bd2a0d824df");
+        public static readonly Guid CommandSet = new Guid("e0890da8-38a4-4db1-bbaa-93ba450cf9a9");
 
         /// <summary>
         /// VS Package that provides this command, not null.
@@ -35,11 +35,11 @@ namespace SurroundSelection
         private readonly Package package;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SingleQuotesCommand"/> class.
+        /// Initializes a new instance of the <see cref="AsteriskCommand"/> class.
         /// Adds our command handlers for menu (commands must exist in the command table file)
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
-        private SingleQuotesCommand(Package package)
+        private AsteriskCommand(Package package)
         {
             if (package == null)
             {
@@ -60,7 +60,7 @@ namespace SurroundSelection
         /// <summary>
         /// Gets the instance of the command.
         /// </summary>
-        public static SingleQuotesCommand Instance
+        public static AsteriskCommand Instance
         {
             get;
             private set;
@@ -83,7 +83,7 @@ namespace SurroundSelection
         /// <param name="package">Owner package, not null.</param>
         public static void Initialize(Package package)
         {
-            Instance = new SingleQuotesCommand(package);
+            Instance = new AsteriskCommand(package);
         }
 
         /// <summary>
@@ -101,10 +101,10 @@ namespace SurroundSelection
                 var selection = (TextSelection)dte.ActiveDocument.Selection;
                 string text = selection.Text;
                 if (!string.IsNullOrEmpty(text))
-                    selection.Text = BaseFunctionality.ToggleSingleQuotes(text);
+                    selection.Text = BaseFunctionality.ToggleAsterisk(text);
                 else
                 {
-                    string message = string.Format(CultureInfo.CurrentCulture, "Please select some text to toggle single quotes", GetType().FullName);
+                    string message = string.Format(CultureInfo.CurrentCulture, "Please select some text to toggle asterisk", GetType().FullName);
                     BaseFunctionality.ShowMessage(ServiceProvider, null, message);
                 }
             }
