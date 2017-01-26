@@ -18,6 +18,8 @@ namespace SurroundSelection
         /// <param name="message">Message to show</param>
         public static void ShowMessage(IServiceProvider serviceProvider, string title, string message)
         {
+            if (title == null)
+                title = "Surround Selection";
             VsShellUtilities.ShowMessageBox(
                         serviceProvider,
                         message,

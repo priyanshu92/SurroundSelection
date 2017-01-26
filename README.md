@@ -23,17 +23,22 @@ Toggle wrapping of selected text in visual studio with:
 - Asterisk
 
 ### Steps to use
-Select any text in Visual Studio:
+Select any text in Visual Studio and right click.
 
-![Selected Text](Screenshots/Selected-Text.png)
+![Select And Right Click](Screenshots/select-and-right-click.png)
 
-Then go to Edit -> Surround Selection with
-
-![Double Quotes](Screenshots/double-quotes.png)
-
-Click on *Double Quotes* (or any other option) to get the text wrapped around that:
+Then select *Surround Selection With* and then select the option you want eg. *Double Quotes* to get the text wrapped around that:
 
 ![Double Quotes Result](Screenshots/double-quotes-result.png)
+
+## Hotkeys
+
+| Action         | Hotkey          |
+|----------------|-----------------|
+| Double Quotes  | Ctrl+K, Ctrl+'  |
+| Asterisk       | Ctrl+K, Ctrl+8  |
+
+--------------------------------------------------------
 
 For cloning and building this project yourself, make sure
 to install the

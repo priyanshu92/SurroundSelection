@@ -7,8 +7,8 @@
 
   <Commands package="guidDoubleQuotesCommandPackage">
     <Groups>
-      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="MyMenuGroup" priority="0xFF81">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT" />
+      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="MyMenuGroup" priority="0x0900">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
       </Group>
       <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="QuotesGroup" priority="0x0100">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenu" />
