@@ -68,6 +68,7 @@ namespace SurroundSelection
         {
             DoubleQuotesCommand.Initialize(this);
             base.Initialize();
+            SingleQuotesCommand.Initialize(this);
         }
 
         #endregion

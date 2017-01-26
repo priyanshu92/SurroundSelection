@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <Extern href="stdidcmd.h"/>
+  <Extern href="stdidcmd.h" />
 
-  <Extern href="vsshlids.h"/>
+  <Extern href="vsshlids.h" />
 
   <Commands package="guidDoubleQuotesCommandPackage">
     <Groups>
@@ -12,7 +12,7 @@
       </Group>
       <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenu" />
-      </Group>      
+      </Group>
     </Groups>
 
     <Menus>
@@ -32,10 +32,17 @@
           <ButtonText>Double Quotes</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" priority="0x0100" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
+        <Strings>
+          <ButtonText>Single Quotes</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <Bitmaps>
-      <Bitmap guid="guidImages" href="Resources\DoubleQuotesCommand.png" usedList="bmpPic1"/>
+      <Bitmap guid="guidImages" href="Resources\DoubleQuotesCommand.png" usedList="bmpPic1" />
+      <!--<Bitmap guid="guidImages1" href="Resources\SingleQuotesCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />-->
     </Bitmaps>
   </Commands>
 
@@ -50,8 +57,22 @@
       <IDSymbol name="SubMenuGroup" value="0x1150" />
     </GuidSymbol>
 
-    <GuidSymbol name="guidImages" value="{8ad9d13c-0ef8-4a2d-829e-0f48ed5ef4b0}" >
+    <GuidSymbol name="guidImages" value="{8ad9d13c-0ef8-4a2d-829e-0f48ed5ef4b0}">
       <IDSymbol name="bmpPic1" value="1" />     
     </GuidSymbol>
+  
+    <GuidSymbol value="{1779ad3b-0e47-4e85-8c91-2bd2a0d824df}" name="guidDoubleQuotesCommandPackageCmdSet1">
+      <IDSymbol value="4128" name="MyMenuGroup" />
+      <IDSymbol value="256" name="cmdidSingleQuotesCommand" />
+    </GuidSymbol>
+  
+    <!--<GuidSymbol value="{2a5f8a29-c38e-45e0-b430-02f5229f2b7e}" name="guidImages1">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>-->
   </Symbols>
 </CommandTable>
