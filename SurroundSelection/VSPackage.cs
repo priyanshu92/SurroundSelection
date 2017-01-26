@@ -36,21 +36,16 @@ namespace SurroundSelection
     /// </para>
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true)]
-    [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
+    [InstalledProductRegistration("#110", "#112", Vsix.Version, IconResourceID = 400)] // Info on this package for Help/About
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    [Guid(DoubleQuotesCommandPackage.PackageGuidString)]
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
-    public sealed class DoubleQuotesCommandPackage : Package
+    [Guid(PackageGuids.guidDoubleQuotesCommandPackageString)]
+    public sealed class VSPackage : Package
     {
-        /// <summary>
-        /// DoubleQuotesCommandPackage GUID string.
-        /// </summary>
-        public const string PackageGuidString = "cd3130df-8656-4af0-a2d4-d8f36a0eb7d0";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DoubleQuotesCommand"/> class.
         /// </summary>
-        public DoubleQuotesCommandPackage()
+        public VSPackage()
         {
             // Inside this method you can place any initialization code that does not require
             // any Visual Studio service because at this point the package object is created but
