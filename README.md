@@ -24,14 +24,18 @@ Toggle wrapping of selected text in visual studio with:
 - Angular Brackets
 - Asterisk
 
-### Feature 1
-Describe feature 1. Add screenshots/code samples etc.
+### Steps to use
+Select any text in Visual Studio:
 
-### Feature 2
-Describe feature 2. Add screenshots/code samples etc.
+![Selected Text](Screenshots/Selected-Text.png)
 
-#### Sub feature
-Describe sub feature. Add screenshots/code samples etc.
+Then go to Edit -> Surround Selection with
+
+![Double Quotes](Screenshots/double-quotes.png)
+
+Click on *Double Quotes* (or any other option) to get the text wrapped around that:
+
+![Double Quotes Result](Screenshots/double-quotes-result.png)
 
 For cloning and building this project yourself, make sure
 to install the

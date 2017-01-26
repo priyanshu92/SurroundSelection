@@ -7,12 +7,18 @@
 
   <Commands package="guidDoubleQuotesCommandPackage">
     <Groups>
-      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="MyMenuGroup" priority="0xFF81">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT" />
-      </Group>
-      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">
+      </Group>     
+      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="QuotesGroup" priority="0x0100">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenu" />
-      </Group>      
+      </Group>
+      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" priority="0x0200">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenu" />
+      </Group>
+      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" priority="0x0300">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenu" />
+      </Group>
     </Groups>
 
     <Menus>
@@ -26,38 +32,38 @@
 
     <Buttons>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet" id="DoubleQuotesCommandId" priority="0x0100" type="Button">
-        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="QuotesGroup" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
           <ButtonText>Double Quotes</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" priority="0x0200" type="Button">
-        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="QuotesGroup" />        
         <Strings>
           <ButtonText>Single Quotes</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidBracesCommand" priority="0x0300" type="Button">
-        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />        
         <Strings>
           <ButtonText>Braces</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesis" priority="0x0400" type="Button">
-        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />        
         <Strings>
           <ButtonText>Parentheses</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidSquareBracketsCommand" priority="0x0500" type="Button">
-        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />        
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />        
         <Strings>
           <ButtonText>Square Brackets</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBrackets" priority="0x0600" type="Button">
-        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />
         <Strings>
           <ButtonText>Angular Brackets</ButtonText>
         </Strings>
@@ -88,6 +94,8 @@
       <IDSymbol name="SubMenuId" value="0x0100" />
       <IDSymbol name="SubMenu" value="0x1100" />
       <IDSymbol name="SubMenuGroup" value="0x1150" />
+      <IDSymbol name="QuotesGroup" value="0x1250" />
+      <IDSymbol name="BracketsGroup" value="0x1350" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{8ad9d13c-0ef8-4a2d-829e-0f48ed5ef4b0}">
