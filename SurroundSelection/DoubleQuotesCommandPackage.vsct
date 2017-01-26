@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidDoubleQuotesCommandPackage">
+    <Groups>
+      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT" />
+      </Group>
+      <Group guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenu" />
+      </Group>      
+    </Groups>
+
+    <Menus>
+      <Menu guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenu" priority="0x0200" type="Menu">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Surround Selection With</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Buttons>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet" id="DoubleQuotesCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Double Quotes</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\DoubleQuotesCommand.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidDoubleQuotesCommandPackage" value="{cd3130df-8656-4af0-a2d4-d8f36a0eb7d0}" />
+
+    <GuidSymbol name="guidDoubleQuotesCommandPackageCmdSet" value="{47bb1886-9d77-482b-9d50-1c10507119ee}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="DoubleQuotesCommandId" value="0x0100" />
+      <IDSymbol name="SubMenuId" value="0x0100" />
+      <IDSymbol name="SubMenu" value="0x1100" />
+      <IDSymbol name="SubMenuGroup" value="0x1150" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{8ad9d13c-0ef8-4a2d-829e-0f48ed5ef4b0}" >
+      <IDSymbol name="bmpPic1" value="1" />     
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
