@@ -7,8 +7,7 @@ or get the [CI build](http://vsixgallery.com/extension/4c807d55-9263-4ce0-9c1a-b
 
 ---------------------------------------
 
-The quickest way to wrap some selected text with various delimiters like double quotes, single quotes, braces etc.The quickest w
-    wrap, selection, quote, braces, bracketsay
+The quickest way to wrap some selected text with various delimiters like double quotes, single quotes, braces etc.
 
 See the [change log](CHANGELOG.md) for changes and road map.
 
