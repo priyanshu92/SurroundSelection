@@ -2,8 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/u3mx8qirp7nv4s86?svg=true)](https://ci.appveyor.com/project/priyanshu92/surroundselection)
 
-<!-- Update the VS Gallery link after you upload the VSIX-->
-Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/[GuidFromGallery])
+Download this extension from the [VS Gallery](https://marketplace.visualstudio.com/items?itemName=PRIYANSHUAGRAWAL92.SurroundSelection)
 or get the [CI build](http://vsixgallery.com/extension/4c807d55-9263-4ce0-9c1a-bfef58e96b02/).
 
 ---------------------------------------
