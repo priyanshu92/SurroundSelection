@@ -70,7 +70,7 @@
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" priority="0x0700" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
-        <Icon guid="guidImages3" id="bmpPic1" />
+        <Icon guid="guidImages3" id="bmpPic2" />
         <Strings>
           <ButtonText>Asterisk</ButtonText>
         </Strings>
@@ -78,10 +78,8 @@
     </Buttons>
 
     <Bitmaps>
-      <Bitmap guid="guidImages" href="Resources\DoubleQuotesCommand.png" usedList="bmpPic1" />     
-      <!--<Bitmap guid="guidImages1" href="Resources\SquareBracketsCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
-      <Bitmap guid="guidImages2" href="Resources\AngularBrackets.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />-->
-      <Bitmap guid="guidImages3" href="Resources\AsteriskCommand.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages" href="Resources\DoubleQuotesCommand.png" usedList="bmpPic1" />    
+      <Bitmap guid="guidImages3" href="Resources\AsteriskCommand.png" usedList="bmpPic2" />
     </Bitmaps>
   </Commands>
 
@@ -103,12 +101,12 @@
     </GuidSymbol>
   
     <GuidSymbol value="{1779ad3b-0e47-4e85-8c91-2bd2a0d824df}" name="guidDoubleQuotesCommandPackageCmdSet1">
-      <IDSymbol value="4128" name="MyMenuGroup" />
+      <IDSymbol value="4128" name="MyMenuGroup2" />
       <IDSymbol value="256" name="cmdidSingleQuotesCommand" />
     </GuidSymbol>
   
     <GuidSymbol value="{e0890da8-38a4-4db1-bbaa-93ba450cf9a9}" name="guidDoubleQuotesCommandPackageCmdSet2">
-      <IDSymbol value="4128" name="MyMenuGroup" />
+      <IDSymbol value="4128" name="MyMenuGroup3" />
       <IDSymbol value="256" name="cmdidBracesCommand" />
       <IDSymbol value="4129" name="cmdidParenthesis" />
       <IDSymbol value="4130" name="cmdidSquareBracketsCommand" />
@@ -117,7 +115,7 @@
     </GuidSymbol>
      
     <GuidSymbol value="{53ffedf0-7706-4d32-9774-cce7be32f013}" name="guidImages3">
-      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="1" />
     </GuidSymbol>
   </Symbols>
 </CommandTable>

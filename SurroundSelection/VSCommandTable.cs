@@ -38,14 +38,14 @@ namespace SurroundSelection
         public const int QuotesGroup = 0x1250;
         public const int BracketsGroup = 0x1350;
         public const int bmpPic1 = 0x0001;
-        public const int MyMenuGroup = 0x1020;
+        public const int MyMenuGroup2 = 0x1020;
         public const int cmdidSingleQuotesCommand = 0x0100;
-        public const int MyMenuGroup = 0x1020;
+        public const int MyMenuGroup3 = 0x1020;
         public const int cmdidBracesCommand = 0x0100;
         public const int cmdidParenthesis = 0x1021;
         public const int cmdidSquareBracketsCommand = 0x1022;
         public const int cmdidAngularBrackets = 0x1023;
         public const int cmdidAsteriskCommand = 0x1024;
-        public const int bmpPic1 = 0x0001;
+        public const int bmpPic2 = 0x0001;
     }
 }
