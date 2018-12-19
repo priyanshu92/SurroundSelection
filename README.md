@@ -13,13 +13,14 @@ See the [change log](CHANGELOG.md) for changes and road map.
 
 ## Features
 Toggle wrapping of selected text in visual studio with:
-- Double Quotes
-- Single Quotes
-- Braces
-- Parentheses
-- Square Brackets
-- Angular Brackets
-- Asterisk
+- Double Quotes " "
+- Single Quotes ' '
+- Braces { }
+- Parentheses ( )
+- Square Brackets [ ]
+- Angular Brackets < >
+- Asterisk * *
+- Multiline Comment /* */
 
 ### Steps to use
 Select any text in Visual Studio and right click.
