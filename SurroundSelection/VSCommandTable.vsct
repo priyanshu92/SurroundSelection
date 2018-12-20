@@ -81,6 +81,12 @@
           <ButtonText>Multi-line Comment /* */</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidHashCommand" priority="0x0900" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
+        <Strings>
+          <ButtonText>Hash # #</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <Bitmaps>
@@ -93,6 +99,7 @@
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet" id="DoubleQuotesCommandId" mod1="Control" key1="K" mod2="Control" key2="0xDE" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="8" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBracketsCommand" mod1="Control" key1="K" mod2="Control" key2="0xBC" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidHashCommand" mod1="Control" key1="K" mod2="Control" key2="3" editor="guidVSStd97" />
   </KeyBindings>
 
   <Symbols>
@@ -125,6 +132,7 @@
       <IDSymbol value="4131" name="cmdidAngularBracketsCommand" />
       <IDSymbol value="4132" name="cmdidAsteriskCommand" />
       <IDSymbol value="4133" name="cmdidMultilineCommentCommand" />
+      <IDSymbol value="4134" name="cmdidHashCommand" />
     </GuidSymbol>
 
     <GuidSymbol value="{53ffedf0-7706-4d32-9774-cce7be32f013}" name="guidImages3">

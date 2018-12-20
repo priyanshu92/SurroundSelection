@@ -192,5 +192,26 @@ namespace SurroundSelection.Commands
             }
             return text;
         }
+
+        /// <summary>
+        /// Toggles hash in the selected text
+        /// </summary>
+        /// <param name="text">The selected text</param>
+        /// <returns>Toggled text</returns>
+        public static string ToggleHash(string text)
+        {
+            if (!string.IsNullOrWhiteSpace(text))
+            {
+                if (text.StartsWith("#") && text.EndsWith("#"))
+                {
+                    text = text.Substring(1, text.Length - 2);
+                }
+                else
+                {
+                    text = $"#{text}#";
+                }
+            }
+            return text;
+        }
     }
 }

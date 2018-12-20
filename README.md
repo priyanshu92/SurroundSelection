@@ -38,6 +38,7 @@ Then select *Surround Selection With* and then select the option you want eg. *D
 | Double Quotes          | Ctrl+K, Ctrl+'  |
 | Asterisk               | Ctrl+K, Ctrl+8  |
 | Angular Brackets       | Ctrl+K, Ctrl+<  |
+| Hash                   | Ctrl+K, Ctrl+3  |
 
 --------------------------------------------------------
 

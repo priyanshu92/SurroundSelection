@@ -77,6 +77,7 @@
     <Compile Include="Commands\BracesCommand.cs" />
     <Compile Include="Commands\BaseFunctionality.cs" />
     <Compile Include="Commands\DoubleQuotesCommand.cs" />
+    <Compile Include="Commands\HashCommand.cs" />
     <Compile Include="Commands\MultilineCommentCommand.cs" />
     <Compile Include="VSPackage.cs" />
     <Compile Include="Commands\ParenthesisCommand.cs" />

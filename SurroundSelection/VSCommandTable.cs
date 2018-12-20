@@ -47,6 +47,7 @@ namespace SurroundSelection
         public const int cmdidAngularBracketsCommand = 0x1023;
         public const int cmdidAsteriskCommand = 0x1024;
         public const int cmdidMultilineCommentCommand = 0x1025;
+        public const int cmdidHashCommand = 0x1026;
         public const int bmpPic2 = 0x0001;
     }
 }

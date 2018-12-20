@@ -62,6 +62,7 @@ namespace SurroundSelection
             await AsteriskCommand.InitializeAsync(this);
             await SquareBracketsCommand.InitializeAsync(this);
             await MultilineCommentCommand.InitializeAsync(this);
+            await HashCommand.InitializeAsync(this);
         }
 
         #endregion Package Members
