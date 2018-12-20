@@ -1,18 +1,11 @@
-﻿//------------------------------------------------------------------------------
-// <copyright file="Parenthesis.cs" company="Company">
-//     Copyright (c) Company.  All rights reserved.
-// </copyright>
-//------------------------------------------------------------------------------
-
+﻿using EnvDTE;
+using EnvDTE80;
+using Microsoft.VisualStudio.Shell;
 using System;
 using System.ComponentModel.Design;
-using System.Globalization;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
-using EnvDTE80;
-using EnvDTE;
+using Task = System.Threading.Tasks.Task;
 
-namespace SurroundSelection
+namespace SurroundSelection.Commands
 {
     /// <summary>
     /// Command handler
@@ -32,29 +25,21 @@ namespace SurroundSelection
         /// <summary>
         /// VS Package that provides this command, not null.
         /// </summary>
-        private readonly Package package;
+        private readonly AsyncPackage package;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ParenthesisCommand"/> class.
         /// Adds our command handlers for menu (commands must exist in the command table file)
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
-        private ParenthesisCommand(Package package)
+        private ParenthesisCommand(AsyncPackage package, OleMenuCommandService commandService)
         {
-            if (package == null)
-            {
-                throw new ArgumentNullException("package");
-            }
+            this.package = package ?? throw new ArgumentNullException(nameof(package));
+            commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
 
-            this.package = package;
-
-            OleMenuCommandService commandService = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-            if (commandService != null)
-            {
-                var menuCommandID = new CommandID(CommandSet, CommandId);
-                var menuItem = new MenuCommand(this.MenuItemCallback, menuCommandID);
-                commandService.AddCommand(menuItem);
-            }
+            var menuCommandID = new CommandID(CommandSet, CommandId);
+            var menuItem = new MenuCommand(MenuItemCallbackAsync, menuCommandID);
+            commandService.AddCommand(menuItem);
         }
 
         /// <summary>
@@ -69,11 +54,11 @@ namespace SurroundSelection
         /// <summary>
         /// Gets the service provider from the owner package.
         /// </summary>
-        private IServiceProvider ServiceProvider
+        private IAsyncServiceProvider ServiceProvider
         {
             get
             {
-                return this.package;
+                return package;
             }
         }
 
@@ -81,9 +66,12 @@ namespace SurroundSelection
         /// Initializes the singleton instance of the command.
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
-        public static void Initialize(Package package)
+        public static async Task InitializeAsync(AsyncPackage package)
         {
-            Instance = new ParenthesisCommand(package);
+            await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(package.DisposalToken);
+
+            OleMenuCommandService commandService = await package.GetServiceAsync((typeof(IMenuCommandService))) as OleMenuCommandService;
+            Instance = new ParenthesisCommand(package, commandService);
         }
 
         /// <summary>
@@ -93,10 +81,11 @@ namespace SurroundSelection
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event args.</param>
-        private void MenuItemCallback(object sender, EventArgs e)
+        private async void MenuItemCallbackAsync(object sender, EventArgs e)
         {
-            DTE2 dte = (DTE2)ServiceProvider.GetService(typeof(DTE));
-            if (dte.ActiveDocument != null)
+            await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(package.DisposalToken);
+            DTE2 dte = (await ServiceProvider.GetServiceAsync(typeof(DTE))) as DTE2;
+            if (dte != null && dte.ActiveDocument != null)
             {
                 var selection = (TextSelection)dte.ActiveDocument.Selection;
                 string text = selection.Text;
@@ -104,7 +93,7 @@ namespace SurroundSelection
                     selection.Text = BaseFunctionality.ToggleParentheses(text);
                 else
                 {
-                    string message = string.Format(CultureInfo.CurrentCulture, "Please select some text to toggle parentheses", GetType().FullName);
+                    string message = "Please select some text to toggle parentheses";
                     BaseFunctionality.ShowMessage(ServiceProvider, null, message);
                 }
             }

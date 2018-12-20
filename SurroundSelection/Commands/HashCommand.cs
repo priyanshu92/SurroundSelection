@@ -10,12 +10,12 @@ namespace SurroundSelection.Commands
     /// <summary>
     /// Command handler
     /// </summary>
-    internal sealed class SquareBracketsCommand
+    internal sealed class HashCommand
     {
         /// <summary>
         /// Command ID.
         /// </summary>
-        public const int CommandId = 4130;
+        public const int CommandId = 4134;
 
         /// <summary>
         /// Command menu group (command set GUID).
@@ -28,11 +28,11 @@ namespace SurroundSelection.Commands
         private readonly AsyncPackage package;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SquareBracketsCommand"/> class.
+        /// Initializes a new instance of the <see cref="HashCommand"/> class.
         /// Adds our command handlers for menu (commands must exist in the command table file)
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
-        private SquareBracketsCommand(AsyncPackage package, OleMenuCommandService commandService)
+        private HashCommand(AsyncPackage package, OleMenuCommandService commandService)
         {
             this.package = package ?? throw new ArgumentNullException(nameof(package));
             commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
@@ -45,7 +45,7 @@ namespace SurroundSelection.Commands
         /// <summary>
         /// Gets the instance of the command.
         /// </summary>
-        public static SquareBracketsCommand Instance
+        public static HashCommand Instance
         {
             get;
             private set;
@@ -71,7 +71,7 @@ namespace SurroundSelection.Commands
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(package.DisposalToken);
 
             OleMenuCommandService commandService = await package.GetServiceAsync((typeof(IMenuCommandService))) as OleMenuCommandService;
-            Instance = new SquareBracketsCommand(package, commandService);
+            Instance = new HashCommand(package, commandService);
         }
 
         /// <summary>
@@ -90,10 +90,10 @@ namespace SurroundSelection.Commands
                 var selection = (TextSelection)dte.ActiveDocument.Selection;
                 string text = selection.Text;
                 if (!string.IsNullOrEmpty(text))
-                    selection.Text = BaseFunctionality.ToggleSquareBrackets(text);
+                    selection.Text = BaseFunctionality.ToggleHash(text);
                 else
                 {
-                    string message = "Please select some text to toggle square brackets";
+                    string message = "Please select some text to toggle hash";
                     BaseFunctionality.ShowMessage(ServiceProvider, null, message);
                 }
             }

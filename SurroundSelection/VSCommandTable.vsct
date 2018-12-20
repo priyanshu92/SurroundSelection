@@ -31,7 +31,7 @@
     </Menus>
 
     <Buttons>
-      <Button guid="guidDoubleQuotesCommandPackageCmdSet" id="DoubleQuotesCommandId" priority="0x0100" type="Button">
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet" id="cmdidDoubleQuotesCommand" priority="0x0100" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="QuotesGroup" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
@@ -41,31 +41,31 @@
       <Button guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" priority="0x0200" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="QuotesGroup" />
         <Strings>
-          <ButtonText>Single Quotes</ButtonText>
+          <ButtonText>Single Quotes ' '</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidBracesCommand" priority="0x0300" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />
         <Strings>
-          <ButtonText>Braces</ButtonText>
+          <ButtonText>Curly Braces { }</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesis" priority="0x0400" type="Button">
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesisCommand" priority="0x0400" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />
         <Strings>
-          <ButtonText>Parentheses</ButtonText>
+          <ButtonText>Parentheses ( )</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidSquareBracketsCommand" priority="0x0500" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />
         <Strings>
-          <ButtonText>Square Brackets</ButtonText>
+          <ButtonText>Square Brackets [ ]</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBrackets" priority="0x0600" type="Button">
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBracketsCommand" priority="0x0600" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />
         <Strings>
-          <ButtonText>Angular Brackets</ButtonText>
+          <ButtonText>Angular Brackets &lt; &gt;</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" priority="0x0700" type="Button">
@@ -73,6 +73,18 @@
         <Icon guid="guidImages3" id="bmpPic2" />
         <Strings>
           <ButtonText>Asterisk</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidMultilineCommentCommand" priority="0x0800" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
+        <Strings>
+          <ButtonText>Multi-line Comment /* */</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidHashCommand" priority="0x0900" type="Button">
+        <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="SubMenuGroup" />
+        <Strings>
+          <ButtonText>Hash # #</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -84,8 +96,15 @@
   </Commands>
 
   <KeyBindings>
-    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet" id="DoubleQuotesCommandId" mod1="Control" key1="K" mod2="Control" key2="0xDE" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" mod1="Shift" key1="K" mod2="Shift" key2="0xDE" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet" id="cmdidDoubleQuotesCommand" mod1="Control" key1="K" mod2="Control" key2="0xDE" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="8" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="VK_MULTIPLY" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBracketsCommand" mod1="Control" key1="K" mod2="Control" key2="0xBC" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidHashCommand" mod1="Control" key1="K" mod2="Control" key2="3" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesisCommand" mod1="Control" key1="K" mod2="Control" key2="9" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidSquareBracketsCommand" mod1="Control" key1="0xDB" mod2="Control" key2="0xDB" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidBracesCommand" mod1="Control" key1="K" mod2="Control" key2="0xDB" editor="guidVSStd97" />
   </KeyBindings>
 
   <Symbols>
@@ -93,7 +112,7 @@
 
     <GuidSymbol name="guidDoubleQuotesCommandPackageCmdSet" value="{47bb1886-9d77-482b-9d50-1c10507119ee}">
       <IDSymbol name="MyMenuGroup" value="0x1020" />
-      <IDSymbol name="DoubleQuotesCommandId" value="0x0100" />
+      <IDSymbol name="cmdidDoubleQuotesCommand" value="0x0100" />
       <IDSymbol name="SubMenuId" value="0x0100" />
       <IDSymbol name="SubMenu" value="0x1100" />
       <IDSymbol name="SubMenuGroup" value="0x1150" />
@@ -113,10 +132,12 @@
     <GuidSymbol value="{e0890da8-38a4-4db1-bbaa-93ba450cf9a9}" name="guidDoubleQuotesCommandPackageCmdSet2">
       <IDSymbol value="4128" name="MyMenuGroup3" />
       <IDSymbol value="256" name="cmdidBracesCommand" />
-      <IDSymbol value="4129" name="cmdidParenthesis" />
+      <IDSymbol value="4129" name="cmdidParenthesisCommand" />
       <IDSymbol value="4130" name="cmdidSquareBracketsCommand" />
-      <IDSymbol value="4131" name="cmdidAngularBrackets" />
+      <IDSymbol value="4131" name="cmdidAngularBracketsCommand" />
       <IDSymbol value="4132" name="cmdidAsteriskCommand" />
+      <IDSymbol value="4133" name="cmdidMultilineCommentCommand" />
+      <IDSymbol value="4134" name="cmdidHashCommand" />
     </GuidSymbol>
 
     <GuidSymbol value="{53ffedf0-7706-4d32-9774-cce7be32f013}" name="guidImages3">

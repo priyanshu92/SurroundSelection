@@ -13,13 +13,15 @@ See the [change log](CHANGELOG.md) for changes and road map.
 
 ## Features
 Toggle wrapping of selected text in visual studio with:
-- Double Quotes
-- Single Quotes
-- Braces
-- Parentheses
-- Square Brackets
-- Angular Brackets
-- Asterisk
+- Double Quotes " "
+- Single Quotes ' '
+- Braces { }
+- Parentheses ( )
+- Square Brackets [  ]
+- Angular Brackets < >
+- Asterisk * *
+- Multiline Comment /* */
+- Hash # #
 
 ### Steps to use
 Select any text in Visual Studio and right click.
@@ -32,10 +34,16 @@ Then select *Surround Selection With* and then select the option you want eg. *D
 
 ## Hotkeys
 
-| Action         | Hotkey          |
-|----------------|-----------------|
-| Double Quotes  | Ctrl+K, Ctrl+'  |
-| Asterisk       | Ctrl+K, Ctrl+8  |
+| Action                 | Hotkey          |
+|------------------------|-----------------|
+| Single Quotes          | Shift+K, Ctrl+'  |
+| Double Quotes          | Ctrl+K, Ctrl+'  |
+| Asterisk               | Ctrl+K, Ctrl+*  |
+| Angular Brackets       | Ctrl+K, Ctrl+<  |
+| Hash                   | Ctrl+K, Ctrl+#  |
+| Parentheses            | Ctrl+K, Ctrl+(  |
+| Square Brackets        | Ctrl+[, Ctrl+[  |
+| Curly Braces           | Ctrl+K, Ctrl+{  |
 
 --------------------------------------------------------
 

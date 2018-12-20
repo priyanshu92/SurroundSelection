@@ -1,27 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="4c807d55-9263-4ce0-9c1a-bfef58e96b02" Version="1.0" Language="en-US" Publisher="Priyanshu Agrawal" />
-    <DisplayName>Surround Selection</DisplayName>
-    <Description xml:space="preserve">The quickest way to wrap some selected text with various delimiters like double quotes, single quotes, braces etc.</Description>
-    <MoreInfo>https://github.com/priyanshu92/SurroundSelection</MoreInfo>
-    <License>Resources\LICENSE</License>
-    <Icon>Resources\Icon.png</Icon>
-    <PreviewImage >Resources\Preview.png</PreviewImage>
-    <Tags >surround, wrap, quotes, delimiters</Tags>
-  </Metadata>
-  <Installation>
-    <InstallationTarget Version="[14.0,15.0]" Id="Microsoft.VisualStudio.Community" />
-    <InstallationTarget Version="[14.0,15.0]" Id="Microsoft.VisualStudio.Enterprise" />
-  </Installation>
-  <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
-    <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" d:Source="Installed" Version="[14.0]" />
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-  </Assets>
-  <Prerequisites>
-    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,16.0)" DisplayName="Visual Studio core editor" />
-  </Prerequisites>
+    <Metadata>
+        <Identity Id="4c807d55-9263-4ce0-9c1a-bfef58e96b02" Version="2.0" Language="en-US" Publisher="Priyanshu Agrawal" />
+        <DisplayName>Surround Selection</DisplayName>
+        <Description xml:space="preserve">The quickest way to wrap some selected text with various delimiters like double quotes, single quotes, braces etc.</Description>
+        <MoreInfo>https://github.com/priyanshu92/SurroundSelection</MoreInfo>
+        <License>Resources\LICENSE</License>
+        <Icon>Resources\Icon.png</Icon>
+        <PreviewImage>Resources\Preview.png</PreviewImage>
+        <Tags>surround, wrap, quotes, delimiters</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Community" />
+        <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Enterprise" />
+        <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Pro" />
+    </Installation>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
 </PackageManifest>

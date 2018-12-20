@@ -1,20 +1,7 @@
-﻿//------------------------------------------------------------------------------
-// <copyright file="DoubleQuotesCommandPackage.cs" company="Company">
-//     Copyright (c) Company.  All rights reserved.
-// </copyright>
-//------------------------------------------------------------------------------
-
+﻿using Microsoft.VisualStudio.Shell;
+using SurroundSelection.Commands;
 using System;
-using System.ComponentModel.Design;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
 using System.Runtime.InteropServices;
-using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.OLE.Interop;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.Win32;
 
 namespace SurroundSelection
 {
@@ -35,15 +22,15 @@ namespace SurroundSelection
     /// To get loaded into VS, the package must be referred by &lt;Asset Type="Microsoft.VisualStudio.VsPackage" ...&gt; in .vsixmanifest file.
     /// </para>
     /// </remarks>
-    [PackageRegistration(UseManagedResourcesOnly = true)]
+    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration("#110", "#112", Vsix.Version, IconResourceID = 400)] // Info on this package for Help/About
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [Guid(PackageGuids.guidDoubleQuotesCommandPackageString)]
-    public sealed class VSPackage : Package
+    public sealed class VSPackage : AsyncPackage
     {
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="DoubleQuotesCommand"/> class.
+        /// Initializes a new instance of the class.
+        /// Initializes a new instance of the class.
         /// </summary>
         public VSPackage()
         {
@@ -59,18 +46,25 @@ namespace SurroundSelection
         /// Initialization of the package; this method is called right after the package is sited, so this is the place
         /// where you can put all the initialization code that rely on services provided by VisualStudio.
         /// </summary>
-        protected override void Initialize()
+        protected override async System.Threading.Tasks.Task InitializeAsync(System.Threading.CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
-            DoubleQuotesCommand.Initialize(this);
-            base.Initialize();
-            SingleQuotesCommand.Initialize(this);
-            BracesCommand.Initialize(this);
-            ParenthesisCommand.Initialize(this);
-            AngularBracketsCommand.Initialize(this);
-            AsteriskCommand.Initialize(this);
-            SquareBracketsCommand.Initialize(this);
+            await base.InitializeAsync(cancellationToken, progress);
+
+            // When initialized asynchronously, we *may* be on a background thread at this point.
+            // Do any initialization that requires the UI thread after switching to the UI thread.
+            // Otherwise, remove the switch to the UI thread if you don't need it.
+            await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
+            await DoubleQuotesCommand.InitializeAsync(this);
+            await SingleQuotesCommand.InitializeAsync(this);
+            await BracesCommand.InitializeAsync(this);
+            await ParenthesisCommand.InitializeAsync(this);
+            await AngularBracketsCommand.InitializeAsync(this);
+            await AsteriskCommand.InitializeAsync(this);
+            await SquareBracketsCommand.InitializeAsync(this);
+            await MultilineCommentCommand.InitializeAsync(this);
+            await HashCommand.InitializeAsync(this);
         }
 
-        #endregion
+        #endregion Package Members
     }
 }
