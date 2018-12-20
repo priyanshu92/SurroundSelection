@@ -21,6 +21,7 @@ Toggle wrapping of selected text in visual studio with:
 - Angular Brackets < >
 - Asterisk * *
 - Multiline Comment /* */
+- Hash # #
 
 ### Steps to use
 Select any text in Visual Studio and right click.
@@ -36,9 +37,9 @@ Then select *Surround Selection With* and then select the option you want eg. *D
 | Action                 | Hotkey          |
 |------------------------|-----------------|
 | Double Quotes          | Ctrl+K, Ctrl+'  |
-| Asterisk               | Ctrl+K, Ctrl+8  |
+| Asterisk               | Ctrl+K, Ctrl+*  |
 | Angular Brackets       | Ctrl+K, Ctrl+<  |
-| Hash                   | Ctrl+K, Ctrl+3  |
+| Hash                   | Ctrl+K, Ctrl+#  |
 
 --------------------------------------------------------
 

@@ -9,7 +9,7 @@ on the official Visual Studio extension gallery.
 
 ## 2.0
 
-- [x] Added support for multiline comments.
+- [x] Added support for multiline comments /* */ and hash # #.
 - [x] Use Async APIs within the extesion to do most work in the background.
 - [x] Added some new hotkeys.
 
