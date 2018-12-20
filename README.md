@@ -17,7 +17,7 @@ Toggle wrapping of selected text in visual studio with:
 - Single Quotes ' '
 - Braces { }
 - Parentheses ( )
-- Square Brackets [ ]
+- Square Brackets [  ]
 - Angular Brackets < >
 - Asterisk * *
 - Multiline Comment /* */
