@@ -41,6 +41,7 @@ Then select *Surround Selection With* and then select the option you want eg. *D
 | Asterisk               | Ctrl+K, Ctrl+*  |
 | Angular Brackets       | Ctrl+K, Ctrl+<  |
 | Hash                   | Ctrl+K, Ctrl+#  |
+| Parentheses            | Ctrl+K, Ctrl+(  |
 
 --------------------------------------------------------
 

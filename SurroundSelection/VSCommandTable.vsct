@@ -50,7 +50,7 @@
           <ButtonText>Curly Braces { }</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesis" priority="0x0400" type="Button">
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesisCommand" priority="0x0400" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />
         <Strings>
           <ButtonText>Parentheses ( )</ButtonText>
@@ -102,6 +102,7 @@
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="VK_MULTIPLY" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBracketsCommand" mod1="Control" key1="K" mod2="Control" key2="0xBC" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidHashCommand" mod1="Control" key1="K" mod2="Control" key2="3" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesisCommand" mod1="Control" key1="K" mod2="Control" key2="9" editor="guidVSStd97" />
   </KeyBindings>
 
   <Symbols>
@@ -129,7 +130,7 @@
     <GuidSymbol value="{e0890da8-38a4-4db1-bbaa-93ba450cf9a9}" name="guidDoubleQuotesCommandPackageCmdSet2">
       <IDSymbol value="4128" name="MyMenuGroup3" />
       <IDSymbol value="256" name="cmdidBracesCommand" />
-      <IDSymbol value="4129" name="cmdidParenthesis" />
+      <IDSymbol value="4129" name="cmdidParenthesisCommand" />
       <IDSymbol value="4130" name="cmdidSquareBracketsCommand" />
       <IDSymbol value="4131" name="cmdidAngularBracketsCommand" />
       <IDSymbol value="4132" name="cmdidAsteriskCommand" />

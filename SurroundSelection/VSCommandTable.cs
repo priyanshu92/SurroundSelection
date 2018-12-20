@@ -42,7 +42,7 @@ namespace SurroundSelection
         public const int cmdidSingleQuotesCommand = 0x0100;
         public const int MyMenuGroup3 = 0x1020;
         public const int cmdidBracesCommand = 0x0100;
-        public const int cmdidParenthesis = 0x1021;
+        public const int cmdidParenthesisCommand = 0x1021;
         public const int cmdidSquareBracketsCommand = 0x1022;
         public const int cmdidAngularBracketsCommand = 0x1023;
         public const int cmdidAsteriskCommand = 0x1024;
