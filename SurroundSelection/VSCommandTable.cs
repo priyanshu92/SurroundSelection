@@ -31,7 +31,7 @@ namespace SurroundSelection
     internal sealed partial class PackageIds
     {
         public const int MyMenuGroup = 0x1020;
-        public const int DoubleQuotesCommandId = 0x0100;
+        public const int cmdidDoubleQuotesCommand = 0x0100;
         public const int SubMenuId = 0x0100;
         public const int SubMenu = 0x1100;
         public const int SubMenuGroup = 0x1150;
