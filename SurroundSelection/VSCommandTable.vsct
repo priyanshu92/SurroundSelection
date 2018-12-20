@@ -96,13 +96,15 @@
   </Commands>
 
   <KeyBindings>
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" mod1="Shift" key1="K" mod2="Shift" key2="0xDE" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet" id="cmdidDoubleQuotesCommand" mod1="Control" key1="K" mod2="Control" key2="0xDE" editor="guidVSStd97" />
-    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" mod1="Control" key1="0xDE" mod2="Control" key2="0xDE" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="8" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="VK_MULTIPLY" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBracketsCommand" mod1="Control" key1="K" mod2="Control" key2="0xBC" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidHashCommand" mod1="Control" key1="K" mod2="Control" key2="3" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidParenthesisCommand" mod1="Control" key1="K" mod2="Control" key2="9" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidSquareBracketsCommand" mod1="Control" key1="0xDB" mod2="Control" key2="0xDB" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidBracesCommand" mod1="Control" key1="K" mod2="Control" key2="0xDB" editor="guidVSStd97" />
   </KeyBindings>
 
   <Symbols>
