@@ -62,7 +62,7 @@
           <ButtonText>Square Brackets [ ]</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBrackets" priority="0x0600" type="Button">
+      <Button guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBracketsCommand" priority="0x0600" type="Button">
         <Parent guid="guidDoubleQuotesCommandPackageCmdSet" id="BracketsGroup" />
         <Strings>
           <ButtonText>Angular Brackets &lt; &gt;</ButtonText>
@@ -92,6 +92,7 @@
   <KeyBindings>
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet" id="DoubleQuotesCommandId" mod1="Control" key1="K" mod2="Control" key2="0xDE" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="8" editor="guidVSStd97" />
+    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAngularBracketsCommand" mod1="Control" key1="K" mod2="Control" key2="0xBC" editor="guidVSStd97" />
   </KeyBindings>
 
   <Symbols>
@@ -121,7 +122,7 @@
       <IDSymbol value="256" name="cmdidBracesCommand" />
       <IDSymbol value="4129" name="cmdidParenthesis" />
       <IDSymbol value="4130" name="cmdidSquareBracketsCommand" />
-      <IDSymbol value="4131" name="cmdidAngularBrackets" />
+      <IDSymbol value="4131" name="cmdidAngularBracketsCommand" />
       <IDSymbol value="4132" name="cmdidAsteriskCommand" />
       <IDSymbol value="4133" name="cmdidMultilineCommentCommand" />
     </GuidSymbol>

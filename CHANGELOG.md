@@ -11,6 +11,7 @@ on the official Visual Studio extension gallery.
 
 - [x] Added support for multiline comments.
 - [x] Use Async APIs within the extesion to do most work in the background.
+- [x] Added some new hotkeys.
 
 ## 1.0
 

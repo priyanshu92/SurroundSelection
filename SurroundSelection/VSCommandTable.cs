@@ -44,7 +44,7 @@ namespace SurroundSelection
         public const int cmdidBracesCommand = 0x0100;
         public const int cmdidParenthesis = 0x1021;
         public const int cmdidSquareBracketsCommand = 0x1022;
-        public const int cmdidAngularBrackets = 0x1023;
+        public const int cmdidAngularBracketsCommand = 0x1023;
         public const int cmdidAsteriskCommand = 0x1024;
         public const int cmdidMultilineCommentCommand = 0x1025;
         public const int bmpPic2 = 0x0001;
