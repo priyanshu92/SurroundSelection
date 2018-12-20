@@ -28,9 +28,7 @@ Select any text in Visual Studio and right click.
 
 ![Select And Right Click](Screenshots/select-and-right-click.png)
 
-Then select *Surround Selection With* and then select the option you want eg. *Double Quotes* to get the text wrapped around that:
-
-![Double Quotes Result](Screenshots/double-quotes-result.png)
+Then select *Surround Selection With* and then select the option you want eg. *Double Quotes* to get the text wrapped around that.
 
 ## Hotkeys
 
