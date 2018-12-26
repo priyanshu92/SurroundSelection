@@ -34,7 +34,6 @@ Then select *Surround Selection With* and then select the option you want eg. *D
 
 | Action                 | Hotkey          |
 |------------------------|-----------------|
-| Single Quotes          | Shift+K, Ctrl+'  |
 | Double Quotes          | Ctrl+K, Ctrl+'  |
 | Asterisk               | Ctrl+K, Ctrl+*  |
 | Angular Brackets       | Ctrl+K, Ctrl+<  |

@@ -96,7 +96,6 @@
   </Commands>
 
   <KeyBindings>
-    <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet1" id="cmdidSingleQuotesCommand" mod1="Shift" key1="K" mod2="Shift" key2="0xDE" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet" id="cmdidDoubleQuotesCommand" mod1="Control" key1="K" mod2="Control" key2="0xDE" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="8" editor="guidVSStd97" />
     <KeyBinding guid="guidDoubleQuotesCommandPackageCmdSet2" id="cmdidAsteriskCommand" mod1="Control" key1="K" mod2="Control" key2="VK_MULTIPLY" editor="guidVSStd97" />
