@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
 using IAsyncServiceProvider = Microsoft.VisualStudio.Shell.IAsyncServiceProvider;
+using OLEMSGICON = Microsoft.VisualStudio.Shell.Interop.OLEMSGICON;
+using OLEMSGBUTTON = Microsoft.VisualStudio.Shell.Interop.OLEMSGBUTTON;
+using OLEMSGDEFBUTTON = Microsoft.VisualStudio.Shell.Interop.OLEMSGDEFBUTTON;
 
 namespace SurroundSelection.Commands
 {
