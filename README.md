@@ -1,5 +1,7 @@
 # Surround Selection
 
+## 🚨Project Archived: This functionality is now natively available in [Visual Studio](https://devblogs.microsoft.com/visualstudio/2023-a-year-of-community-experiments/#surround-selection)🚨
+
 [![Build status](https://ci.appveyor.com/api/projects/status/u3mx8qirp7nv4s86?svg=true)](https://ci.appveyor.com/project/priyanshu92/surroundselection)
 
 Download this extension from the [VS Gallery](https://marketplace.visualstudio.com/items?itemName=PRIYANSHUAGRAWAL92.SurroundSelection)
