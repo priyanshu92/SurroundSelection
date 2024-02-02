@@ -34,15 +34,16 @@ Then select *Surround Selection With* and then select the option you want eg. *D
 
 ## Hotkeys
 
-| Action                 | Hotkey          |
-|------------------------|-----------------|
-| Double Quotes          | Ctrl+K, Ctrl+'  |
-| Asterisk               | Ctrl+K, Ctrl+*  |
-| Angular Brackets       | Ctrl+K, Ctrl+<  |
-| Hash                   | Ctrl+K, Ctrl+#  |
-| Parentheses            | Ctrl+K, Ctrl+(  |
-| Square Brackets        | Ctrl+[, Ctrl+[  |
-| Curly Braces           | Ctrl+K, Ctrl+{  |
+| Action           | Hotkey               |
+|------------------|----------------------|
+| Double Quotes    | Ctrl+K, Ctrl+'       |
+| Double Quotes    | Ctrl+K, Ctrl+Shift+' |
+| Asterisk         | Ctrl+K, Ctrl+*       |
+| Angular Brackets | Ctrl+K, Ctrl+<       |
+| Hash             | Ctrl+K, Ctrl+#       |
+| Parentheses      | Ctrl+K, Ctrl+(       |
+| Square Brackets  | Ctrl+K, Ctrl+[       |
+| Curly Braces     | Ctrl+K, Ctrl+Shift+[ |
 
 --------------------------------------------------------
 
